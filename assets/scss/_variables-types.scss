@@ -1,0 +1,141 @@
+// main type-family Roboto
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+
+//- colors
+
+//* text, borders, etc
+$primary-color: #4E4E4E;
+$secondary-color:#373737;
+$accent-color:#fff;
+//$lightest-color: rgba(31, 32, 65, 0.05);
+//$dark-color: #1F2041;
+
+//* theme colors
+$primary-theme-color: #00AFDB;
+$secondary-theme-color: #009CC2;
+
+$primary-gradient: linear-gradient(0deg, rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4));//картинка главная
+$secondary-gradient: linear-gradient(0deg, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)); //footer
+
+//$primary-gradient-half-opacity: linear-gradient(180deg, rgba(188, 156, 255, 0.5) 0%, rgba(139, 164, 249, 0.5) 100%);
+//$secondary-gradient__half-opacity: linear-gradient(180deg, rgba(111, 207, 151, 0.5) 0%, rgba(102, 210, 234, 0.5) 100%);
+
+//* types
+$primary-type: 'Roboto', Arial, sans-serif;
+//$secondary-type: QuicksandPro, Quicksand, Opensans, Arial, sans-serif;
+
+//* borders
+/*$border-depth: 1px;
+$border-style: solid;
+$border-radius: 4px;
+
+$border-base: $border-depth $border-style $secondary-color;
+$border-accent: $border-depth $border-style $middle-color;
+$border-light: $border-depth $border-style rgba(31, 32, 65, 0.1);*/
+
+
+//* базовые размеры шрифтов
+$font-body: 14rem;
+$font-h1: 64rem;
+$font-h2: 24rem;
+$font-h3: 16rem;
+
+
+/* брейкпоинты
+$media-maxW: 1223px; // уменьшается только второстепенный шрифт и высота строки в футере
+$media-midW: 1023px; // уменьшается весь шрифт, мобильное меню и футер
+$media-minW: 760px; // убираем бриф справа, центрируем карточку
+$media-sMinW: 560px; // убираем логотип
+$media-uMinW: 410px; // под узкие мобильные экраны - сужаем карточку*/
+
+@mixin head1 {
+  font-family: $primary-type;
+  font-style: normal;
+  font-weight: bold;
+  font-size: #{$font-h1/$font-body}rem;
+  //line-height: 1.26em;
+  //letter-spacing: -0.01em;
+  text-transform: uppercase;
+  color: $accent-color;
+}
+
+h1, .head1 {
+  @include head1;
+}
+
+@mixin head2 {
+  font-family: $primary-type;
+  font-style: normal;
+  font-weight: bold;
+  font-size: #{$font-h2/$font-body}rem;
+  //line-height: 24px;
+  //letter-spacing: -0.01em;
+  text-transform: uppercase;
+  color: $secondary-color;
+}
+
+h2, .head2 {
+  @include head2;
+}
+
+@mixin head3 {
+  font-family: $primary-type;
+  font-style: normal;
+  font-weight: 500;
+  font-size: #{$font-h3/$font-body}rem;
+  //line-height: 1.25em;
+  /* identical to box height */
+  text-transform: uppercase;
+  color: $secondary-color;
+}
+
+h3, .head3 {
+  @include head3;
+}
+
+@mixin regular {
+  font-family: $primary-type;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 1rem;
+  //line-height: 1.71em; // 24px;
+  //letter-spacing: -0.001em;
+  color: $primary-color;
+}
+
+body {
+  @include regular;
+}
+
+/* миксины для медиазапросов
+
+@mixin widthMax {
+  @media (max-width: $media-maxW) {
+    font-size: #{$font-h3/$font-body}rem;
+  }
+}*/
+
+//! общие стили макета
+
+html {
+  width: 1600px; //убрать для прода
+  /*@media (max-width: $media-midW) {
+    font-size: 12px;
+  }*/
+}
+
+//* отступы для логотипа в ui-kit
+.logo-block {
+  margin: 30px 0 0 30px;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+
+  /*@media (max-width: $media-uMinW) {
+    width: 100vw;
+    padding: 0 5vw;
+  }*/
+}
