@@ -52,12 +52,8 @@ body {
     }
 
     &--logo {
-      display: block;
-      width: 44px;
-      height: 44px;
       margin-left: 101px;
       margin-right: 100px;
-      background: url(/assets/img/logo.svg);
     }
   }
 }
@@ -266,7 +262,65 @@ body {
   }
 }
 
+.footer--desktop {
+  padding: 60px 160px 91px 160px;
+  background-color: #000;
+}
+
+.footer-content {
+  display: flex;
+  justify-content: space-between;
+  position: relative;
+
+  &__menu {
+    display: flex;
+    margin-top: 15px;
+
+    &__item {
+      position: relative;
+      margin-right: 41px;
+      list-style: none;
+
+      &::before {
+        content: "\007C";
+        position: absolute;
+        top: 2px;
+        left: -22px;
+        font-size: 10px;
+        color: $primary-color;
+      }
+
+      &:first-child::before {
+        content: "";
+      }
+    }
+
+    &__link {
+      text-decoration: none;
+      color: $accent-color;
+    }
+  }
+
+  &__logo {
+    position: absolute;
+    right: 50%;
+    margin-right: -22px;
+  }
+
+  &__copyright {
+    margin-top: 15px;
+    color: #818181;
+  }
+}
+
 //- общие стили макета
+
+.logo {
+  display: block;
+  width: 44px;
+  height: 44px;
+  background: url(/assets/img/logo.svg);
+}
 
 .btn {
   text-align: center;
@@ -355,8 +409,6 @@ body {
 }
 
 .container__bg {
-  //max-width: 1600px;
-
   &--header {
     background-image: url(/assets/img/bg-image_header.svg);
     background-size: cover;
