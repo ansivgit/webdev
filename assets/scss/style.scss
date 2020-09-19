@@ -212,46 +212,79 @@ body {
 .sign-up {
   display: flex;
   flex-direction: column;
-  //margin-top: 134px;
-  //align-items: center;
-  color: $accent-color;
+  align-items: center;
 
   &__title {
-
+    margin-top: 217px;
+    margin-bottom: 30px;
+    color: $accent-color;
   }
 
   &__form {
-    max-width: 504px;
-    margin-top: 21px;
-    margin-bottom: 29px;
-    font-size: 18px;
-    line-height: 140%;
-    text-align: center;
+    display: flex;
+    width: 406px;
+    margin-bottom: 277px;
+    //font-size: 18px;
+    //line-height: 140%;
+    //text-align: center;
+  }
+
+  &__input {
+    flex: 0 10 auto;
+    width: 100%;
+    padding: 14px 0 12px 24px;
+    border: none;
+    @include regular;
+
+    &::-moz-placeholder {
+      color: $secondary-color;
+    }
+    &::-webkit-input-placeholder {
+      color: $secondary-color;
+    }
+    &::-ms-input-placeholder {
+      color: $secondary-color;
+    }
+    &::placeholder {
+      color: $secondary-color;
+    }
   }
 }
-
-
 
 //- общие стили макета
 
 .btn {
-  display: block;
-  width: fit-content;
-  //margin-right: auto;
-  padding: 16px 47px 14px 47px;
-  line-height: 16px;
-  font-weight: bold;
-  text-transform: uppercase;
-  text-decoration: none;
   text-align: center;
   background-color: $primary-theme-color;
+  border: none;
+  text-decoration: none;
   color: #fff;
 
-  &:hover {
+  &:hover,
+  &:focus {
     background-color: $secondary-theme-color;
+    outline: none;
   }
 
   &__main {
+    display: block;
+    width: fit-content;
+    padding: 16px 47px 14px 47px;
+    line-height: 16px;
+    font-weight: bold;
+    text-transform: uppercase;
+  }
+
+  &__icon {
+    cursor: pointer;
+    &--check {
+      width: 67px;
+      height: 46px;
+
+      &:after {
+        content: url(/assets/img/icons/icon_check.svg);
+      }
+    }
 
   }
 }
@@ -277,5 +310,4 @@ body {
     background-image: url(/assets/img/bg-image_sign-up.svg);
     background-size: cover;
   }
-
 }
