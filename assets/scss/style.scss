@@ -1,5 +1,281 @@
 @import '_global.scss';
 
-.container__bg--header {
-  background: url(/assets/img/bg-image_header.svg);
+body {
+  width: 1600px;
+}
+
+.wrapper--desktop {
+  width: 1062px;
+  margin: 0 auto;
+}
+
+.main-nav {
+  display: flex;
+  height: 95px;
+  margin: 0 auto;
+  //outline: $red;
+
+  &__list {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+  }
+
+  &__item {
+    list-style: none;
+    //outline: $green;
+
+    &:nth-child(2) {
+      margin-left: 85px;
+    }
+
+    &:nth-child(4) {
+      margin-right: 83px;
+    }
+
+    &:nth-child(5) {
+      margin-right: 15px;
+    }
+  }
+
+  &__link {
+    display: inline-block;
+    line-height: 140%;
+    text-decoration: none;
+    color: $accent-color;
+    opacity: 0.8;
+
+    &:hover {
+      border-bottom: 1px solid $accent-color;
+      opacity: 1;
+    }
+
+    &--logo {
+      display: block;
+      width: 44px;
+      height: 44px;
+      margin-left: 101px;
+      margin-right: 100px;
+      background: url(/assets/img/logo.svg);
+    }
+  }
+}
+
+.promo {
+  display: flex;
+  flex-direction: column;
+  margin-top: 134px;
+  align-items: center;
+  color: $accent-color;
+
+  &__title {
+    font-size: 64px;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 4.5px;
+  }
+
+  &__motto {
+    max-width: 504px;
+    margin-top: 21px;
+    margin-bottom: 29px;
+    font-size: 18px;
+    line-height: 140%;
+    text-align: center;
+  }
+
+  &__social {
+    margin-top: 183px;
+    margin-bottom: 89px;
+
+    &__list {
+      display: flex;
+      justify-content: space-between;
+      width: 170px;
+    }
+
+    &__item {
+      list-style: none;
+    }
+
+    &__link {
+      display: block;
+      height: 20px;
+      width: 20px;
+
+      &--mail {
+        background-image: url(/assets/img/icons/icon_mail.svg);
+      }
+      &--fb {
+        background-image: url(/assets/img/icons/icon_facebook.svg);
+      }
+      &--insta {
+        background-image: url(/assets/img/icons/icon_insta.svg);
+      }
+      &--utube {
+        background-image: url(/assets/img/icons/icon_utube.svg);
+      }
+    }
+  }
+}
+
+.benefits {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 120px;
+  margin-bottom: 140px;
+
+  &--left {
+    justify-content: start;
+  }
+
+  &__content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 407px;
+    margin-bottom: 5px;
+    //outline: $red;
+
+    &--left {
+      margin-left: 139px;
+    }
+  }
+
+  &__image {
+    //outline: $green;
+  }
+
+  &__title {
+    margin-top: 6px;
+    margin-bottom: 22px;
+  }
+
+  &__description {
+    margin-bottom: 29px;
+    line-height: 20px;
+  }
+}
+
+.community {
+  padding: 80px 0 140px 269px;
+  overflow: hidden;
+
+  &__nav {
+    margin-bottom: 20px;
+    margin-right: 269px;
+    text-align: right;
+    font-size: 18px;
+    line-height: 20px;
+  }
+
+  &__content {
+    display: flex;
+  }
+
+  &__comment {
+    display: flex;
+    flex: 0 0 auto;
+    flex-direction: column;
+    align-items: center;
+    width: 298px;
+    margin-top: 35px;
+    margin-right: 124px;
+  }
+
+  &__title {
+    margin: 20px 0 12px 0;
+  }
+
+  &__avatar {
+    height: 45px;
+    width: 45px;
+    border-radius: 50%;
+    background-image: url(/assets/img/avatar.png);
+  }
+
+  &__description {
+    text-align: center;
+    line-height: 20px;
+  }
+
+  &__slider {
+    display: flex;
+
+    &__image {
+      margin: 0 15px;
+    }
+  }
+}
+
+.sign-up {
+  display: flex;
+  flex-direction: column;
+  //margin-top: 134px;
+  //align-items: center;
+  color: $accent-color;
+
+  &__title {
+
+  }
+
+  &__form {
+    max-width: 504px;
+    margin-top: 21px;
+    margin-bottom: 29px;
+    font-size: 18px;
+    line-height: 140%;
+    text-align: center;
+  }
+}
+
+
+
+//- общие стили макета
+
+.btn {
+  display: block;
+  width: fit-content;
+  //margin-right: auto;
+  padding: 16px 47px 14px 47px;
+  line-height: 16px;
+  font-weight: bold;
+  text-transform: uppercase;
+  text-decoration: none;
+  text-align: center;
+  background-color: $primary-theme-color;
+  color: #fff;
+
+  &:hover {
+    background-color: $secondary-theme-color;
+  }
+
+  &__main {
+
+  }
+}
+
+.h1-hide {
+  font-size: 0px;
+  line-height: 0px;
+}
+
+.container__bg {
+  //max-width: 1600px;
+
+  &--header {
+    background-image: url(/assets/img/bg-image_header.svg);
+    background-size: cover;
+  }
+
+  &--community {
+    background: #f5f6f7;
+  }
+
+  &--sign-up {
+    background-image: url(/assets/img/bg-image_sign-up.svg);
+    background-size: cover;
+  }
+
 }
