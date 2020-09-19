@@ -143,10 +143,6 @@ body {
     }
   }
 
-  &__image {
-    //outline: $green;
-  }
-
   &__title {
     margin-top: 6px;
     margin-bottom: 22px;
@@ -224,9 +220,6 @@ body {
     display: flex;
     width: 406px;
     margin-bottom: 277px;
-    //font-size: 18px;
-    //line-height: 140%;
-    //text-align: center;
   }
 
   &__input {
@@ -251,6 +244,28 @@ body {
   }
 }
 
+.download {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  &__title {
+    margin-top: 120px;
+    margin-bottom: 21px;
+  }
+
+  &__discription {
+    width: 483px;
+    margin-bottom: 29px;
+    line-height: 20px;
+    text-align: center;
+  }
+
+  &__buttons {
+    margin-bottom: 180px;
+  }
+}
+
 //- общие стили макета
 
 .btn {
@@ -258,7 +273,10 @@ body {
   background-color: $primary-theme-color;
   border: none;
   text-decoration: none;
+  font-weight: bold;
+  text-transform: uppercase;
   color: #fff;
+  cursor: pointer;
 
   &:hover,
   &:focus {
@@ -271,21 +289,63 @@ body {
     width: fit-content;
     padding: 16px 47px 14px 47px;
     line-height: 16px;
-    font-weight: bold;
-    text-transform: uppercase;
   }
 
   &__icon {
-    cursor: pointer;
     &--check {
       width: 67px;
       height: 46px;
 
-      &:after {
+      &::after {
         content: url(/assets/img/icons/icon_check.svg);
       }
     }
+  }
 
+  &__download {
+    display: inline-block;
+    position: relative;
+    padding-top: 17px;
+    padding-bottom: 16px;
+    text-align: left;
+
+    &:first-child {
+      width: 188px-19px;
+      margin-right: 27px;
+      padding-left: 19px;
+    }
+    &:last-child {
+      width: 188px-17px;
+      padding-left: 17px;
+    }
+
+    &::after {
+      content: "";
+      display: inline-block;
+      position: absolute;
+      right: 0;
+      top: 0;
+      width: 60px;
+      height: 50px;
+      text-align: center;
+      background-color: $secondary-theme-color;
+    }
+
+    &--apple::before {
+      content: url(/assets/img/icons/icon_apple.svg);
+      z-index: 10;
+      position: absolute;
+      top: 15px;
+      right: 21px;
+    }
+
+    &--google::before {
+      content: url(/assets/img/icons/icon_android.svg);
+      z-index: 10;
+      position: absolute;
+      top: 13px;
+      right: 20px;
+    }
   }
 }
 
@@ -302,7 +362,7 @@ body {
     background-size: cover;
   }
 
-  &--community {
+  &--BGcolor {
     background: #f5f6f7;
   }
 
