@@ -9,7 +9,7 @@ body {
   box-sizing: border-box;
 }
 
-html,body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre,form,fieldset,input,textarea,p,blockquote,th,td {
+html,body,section,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre,form,fieldset,input,textarea,p,blockquote,th,td,img {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
@@ -21,6 +21,10 @@ html,body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre,form,fieldset,input,textar
   padding-block-end: 0;
   padding-inline-start: 0;
   padding-inline-end: 0;
+}
+
+img {
+  display: block;
 }
 
 h1,h2,h3,h4,h5,h6 {
